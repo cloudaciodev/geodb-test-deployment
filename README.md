@@ -12,6 +12,9 @@ then go to the browser and open localhost:8080
 
 ![alt text](images/console.png)
 
+to get the password run 
+![alt text](images/password.png)
+
 
 
 ## Add your files
