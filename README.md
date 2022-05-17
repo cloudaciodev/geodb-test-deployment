@@ -3,10 +3,10 @@
 
 
 ## Getting started
+Setup argo integration: After deploying argo chart in the eks cluster get password en execute port forward to continue with the repository configuration
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+![alt text](images/port-forward.png)
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
 ## Add your files
 
