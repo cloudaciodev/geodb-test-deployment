@@ -34,6 +34,10 @@ now create the application to deploy the helm chart
 ![alt text](images/app3.png)
 ![alt text](images/app4.png)
 
+once you create the application you will see the application status in the dashboard
+
+![alt text](images/app5.png)
+
 ## Add your files
 
 - [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
