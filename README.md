@@ -22,7 +22,7 @@ kubectl  get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" |
 
 browse to repository option in argo console
 
-![alt text](images/Captura de Pantalla 2022-05-16 a la(s) 11.34.28 p.m..png)
+![alt text](images/Captura_de_Pantalla_2022-05-16_a_la(s)_11.34.28_p.m..png)
 
 
 
