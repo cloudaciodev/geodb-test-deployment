@@ -27,6 +27,12 @@ browse to repository option in argo console
 ![alt text](images/repo3.png)
 
 
+now create the application to deploy the helm chart
+
+![alt text](images/app1.png)
+![alt text](images/app2.png)
+![alt text](images/app3.png)
+![alt text](images/app4.png)
 
 ## Add your files
 
