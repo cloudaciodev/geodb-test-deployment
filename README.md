@@ -5,7 +5,13 @@
 ## Getting started
 Setup argo integration: After deploying argo chart in the eks cluster get password en execute port forward to continue with the repository configuration
 
+to get the argo console runing in the browser run kubectl port-forward as follows:
 ![alt text](images/port-forward.png)
+
+then go to the browser and open localhost:8080
+
+![alt text] (images/console.png)
+
 
 
 ## Add your files
