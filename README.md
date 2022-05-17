@@ -7,7 +7,7 @@ Setup argo integration: After deploying argo chart in the eks cluster get passwo
 
 to get the argo console runing in the browser run kubectl port-forward as follows:
 ```
-kubectl  get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+kubectl port-forward svc/argocd-server  8080:443
 ```
 
 then go to the browser and open localhost:8080
@@ -16,8 +16,14 @@ then go to the browser and open localhost:8080
 
 to get the password run 
 ```
- kubectl port-forward svc/argocd-server  8080:443
+kubectl  get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
+## create connection to github in argo
+
+browse to repository option in argo console
+
+![alt text](images/Captura de Pantalla 2022-05-16 a la(s) 11.34.28 p.m..png)
+
 
 
 
