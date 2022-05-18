@@ -28,7 +28,8 @@ app.get('/', function(req, res) {
       console.log(err);
       return console.error('Error executing query', err.stack)
     }
-    res.status(200).send(result.rows);
+        res.end("Cloudacio demo");
+        res.status(200).send(result.rows);
   });
 });
 
