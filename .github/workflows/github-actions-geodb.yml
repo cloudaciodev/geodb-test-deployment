@@ -51,8 +51,3 @@ jobs:
           sed -i "s/$version/${GITHUB_REF##*/}-$git_hash/" ./helm-app-service/values.yaml
           version=$(cat ./helm-db-service/values.yaml | grep version: | awk '{print $2}')
           sed -i "s/$version/${GITHUB_REF##*/}-$git_hash/" ./helm-db-service/values.yaml
-
-    - name: commit
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: Apply php-cs-fixer changes
