@@ -1,8 +1,18 @@
-# test_services
+# Install Argo cd
+
+```
+helm repo add argo https://argoproj.github.io/argo-helm
+```
+
+```
+helm install my-argo-cd argo/argo-cd --version 4.6.0
+```
 
 
 
 ## Getting started
+
+
 Setup argo integration: After deploying argo chart in the eks cluster get password en execute port forward to continue with the repository configuration
 
 to get the argo console runing in the browser run kubectl port-forward as follows:
