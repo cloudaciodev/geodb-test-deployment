@@ -44,9 +44,15 @@ jobs:
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
     - name: Update Version
+      
       run: |
           git_hash=$(git rev-parse --short "$GITHUB_SHA")
           version=$(cat ./helm-app-service/values.yaml | grep version: | awk '{print $2}')
           sed -i "s/$version/${GITHUB_REF##*/}-$git_hash/" ./helm-app-service/values.yaml
           version=$(cat ./helm-db-service/values.yaml | grep version: | awk '{print $2}')
           sed -i "s/$version/${GITHUB_REF##*/}-$git_hash/" ./helm-db-service/values.yaml
+
+    - name: commit
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Apply php-cs-fixer changes
