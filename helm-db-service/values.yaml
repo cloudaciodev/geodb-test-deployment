@@ -1,0 +1,7 @@
+replicas: 1
+version: 
+
+# Service Specific Values
+spacialdb:
+  image: 
+  namespace:
