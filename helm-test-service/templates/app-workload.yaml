@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: 185690522746.dkr.ecr.us-east-2.amazonaws.com/testapp:2     
+        image: 185690522746.dkr.ecr.us-east-1.amazonaws.com/cloudacio-geodb-app:latest   
 ---
 apiVersion: v1
 kind: Service

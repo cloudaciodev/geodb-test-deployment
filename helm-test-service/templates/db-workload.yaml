@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: db
-          image: 185690522746.dkr.ecr.us-east-2.amazonaws.com/testdb:2
+          image: 185690522746.dkr.ecr.us-east-1.amazonaws.com/cloudacio-geodb-database:latest
           volumeMounts:
           - name: db-data
             mountPath: /var/lib/postgresql/data
