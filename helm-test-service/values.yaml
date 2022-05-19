@@ -1,5 +1,5 @@
 replicas: 1
-version: 'latest'
+version: 
 
 # Service Specific Values
 spacialdb:
