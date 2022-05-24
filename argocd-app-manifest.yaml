@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test
+spec:
+  destination:
+    name: ''
+    namespace: geodb
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: helm-app-service
+    repoURL: 'https://github.com/cloudaciodev/geodb-test-deployment.git'
+    targetRevision: main
+  project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+    syncOptions:
+      - ApplyOutOfSyncOnly=true
+      - PruneLast=true
+      - Validate=false
