@@ -60,4 +60,5 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
       with:
         commit_message: Apply changes
+        commit_options: '--no-verify --signoff'
      
