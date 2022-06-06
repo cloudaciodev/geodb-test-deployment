@@ -30,8 +30,9 @@ jobs:
         ECR_REPOSITORY: cloudacio-geodb-app
         IMAGE_TAG: ${{ github.sha }}
       run: |
-        docker build  -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        git_hash=$(git rev-parse --short "$GITHUB_SHA")
+        docker build  -t $ECR_REGISTRY/$ECR_REPOSITORY:$git_hash .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$git_hash
 
     - name: Build, tag, and push db image to Amazon ECR
       working-directory: db
@@ -40,8 +41,9 @@ jobs:
         ECR_REPOSITORY: cloudacio-geodb-database
         IMAGE_TAG: ${{ github.sha }}
       run: |
-        docker build  -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        git_hash=$(git rev-parse --short "$GITHUB_SHA")
+        docker build  -t $ECR_REGISTRY/$ECR_REPOSITORY:$git_hash .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$git_hash
 
     - name: Update Version
       
@@ -52,3 +54,4 @@ jobs:
           sed -i "s/$version/${GITHUB_REF##*/}-$git_hash/" ./helm-app-service/values.yaml
           version=$(cat ./helm-db-service/values.yaml | grep version: | awk '{print $2}')
           sed -i "s/$version/${GITHUB_REF##*/}-$git_hash/" ./helm-db-service/values.yaml
+          cat ./helm-app-service/values.yaml
