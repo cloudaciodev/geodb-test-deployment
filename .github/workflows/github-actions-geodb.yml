@@ -56,6 +56,8 @@ jobs:
           cat ./helm-app-service/values.yaml
     - name: Update Version
       uses: stefanzweifel/git-auto-commit-action@v4
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
       with:
         commit_message: Apply changes
         commit_options: '--no-verify --signoff'
