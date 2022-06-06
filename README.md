@@ -17,7 +17,7 @@ Setup argo integration: After deploying argo chart in the eks cluster get passwo
 
 to get the argo console runing in the browser run kubectl port-forward as follows:
 ```
-kubectl port-forward svc/argocd-server  8080:443
+kubectl port-forward svc/argo-cd-argocd-server  8080:443
 ```
 
 then go to the browser and open localhost:8080
