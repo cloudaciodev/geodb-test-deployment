@@ -5,7 +5,7 @@ helm repo add argo https://argoproj.github.io/argo-helm
 ```
 
 ```
-helm install my-argo-cd argo/argo-cd --version 4.6.0
+helm install my-argo-cd argo/argo-cd --version 4.6.0 --create-namespace argocd
 ```
 
 
