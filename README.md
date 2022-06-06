@@ -61,3 +61,16 @@ open the app using the load balancer on port 3000
 
 ![alt text](images/browser1.png)
 
+## create Application configurations in ArgoCD
+
+To configure app run:
+
+```
+kubectl apply --filename argocd-app-manifest.yaml
+```
+
+To configure db run:
+
+```
+kubectl apply --filename argocd-db-manifest.yaml
+```
