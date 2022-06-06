@@ -28,8 +28,8 @@ app.get('/', function(req, res) {
       console.log(err);
       return console.error('Error executing query', err.stack)
     }
-       // res.status(200).send(result.rows);
-       res.status(200).send(result);
+       
+        res.status(200).send(result);
   });
 });
 
