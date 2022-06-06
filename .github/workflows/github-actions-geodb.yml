@@ -46,7 +46,6 @@ jobs:
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$git_hash
 
     - name: Update Version
-      
       run: |
           git_hash=$(git rev-parse --short "$GITHUB_SHA")
           echo $git_hash
@@ -55,3 +54,5 @@ jobs:
           version=$(cat ./helm-db-service/values.yaml | grep version: | awk '{print $2}')
           sed -i "s/$version/$git_hash/" ./helm-db-service/values.yaml
           cat ./helm-app-service/values.yaml
+    - name: Update Version
+      uses: stefanzweifel/git-auto-commit-action@v4
