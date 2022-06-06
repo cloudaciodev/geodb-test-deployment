@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: app
-        image: 185690522746.dkr.ecr.us-east-1.amazonaws.com/cloudacio-geodb-app:abc9e01
+        image: 185690522746.dkr.ecr.us-east-1.amazonaws.com/cloudacio-geodb-app:{{ .Values.version }}
