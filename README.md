@@ -74,9 +74,19 @@ To configure db run:
 ```
 kubectl apply --filename argocd-db-manifest.yaml
 
-
+```
 ## Update Github Token permissions
 
 In the current repository go to settings 
 
-```
+![alt text](images/github_token.png)
+
+Select actions and give read and wirte permissions
+
+![alt text](images/github_token1.png)
+
+add stage to autocommit in github actions file (geodb-test-deployment/.github/workflows/github-actions-geodb.yml)
+
+![alt text](images/github_token2.png)
+
+
