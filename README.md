@@ -73,4 +73,10 @@ To configure db run:
 
 ```
 kubectl apply --filename argocd-db-manifest.yaml
+
+
+## Update Github Token permissions
+
+In the current repository go to settings 
+
 ```
