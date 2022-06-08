@@ -83,10 +83,10 @@ In the current repository go to settings
 
 Select actions and give read and wirte permissions
 
-![alt text](images/github_token1.png)
+![alt text](images/github_Token2.png)
 
 add stage to autocommit in github actions file (geodb-test-deployment/.github/workflows/github-actions-geodb.yml)
 
-![alt text](images/github_token2.png)
+![alt text](images/github_token3.png)
 
 
