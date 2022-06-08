@@ -1,5 +1,5 @@
 replicas: 1
-version: c859c11
+version: df0e318
 
 # Service Specific Values
 spacialdb:
