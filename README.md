@@ -5,7 +5,11 @@ helm repo add argo https://argoproj.github.io/argo-helm
 ```
 
 ```
-helm install my-argo-cd argo/argo-cd --version 4.6.0 --create-namespace argocd
+kubectl create namespace argocd
+```
+
+```
+helm install geodb-argocd argo/argo-cd -n argocd
 ```
 
 
@@ -17,7 +21,7 @@ Setup argo integration: After deploying argo chart in the eks cluster get passwo
 
 to get the argo console runing in the browser run kubectl port-forward as follows:
 ```
-kubectl port-forward svc/argo-cd-argocd-server  8080:443
+kubectl port-forward service/geodb-argocd-server -n argocd 8080:443
 ```
 
 then go to the browser and open localhost:8080
@@ -26,7 +30,8 @@ then go to the browser and open localhost:8080
 
 to get the password run 
 ```
-kubectl  get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+
 ```
 ## create connection to github in argo
 
